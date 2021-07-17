@@ -36,9 +36,25 @@
         </div>
 
         <div class="w-full flex justify-evenly h-4/5">
+
+            <!-- Image box -->
             <div
-                class="flex justify-center align-middle m-auto border-black border-2 w-1/2 h-full"
+                class="flex justify-center align-middle m-auto border-black border-2 w-1/2 h-full relative"
             >
+
+            <!-- Div for arrows -->
+            <div class="z-10 absolute justify-center w-full bg-gray-600 align-middle m-auto text-5xl top-1/2">
+
+                <button class="left-3 m-auto absolute ">
+                    &#10094;
+                </button>
+                    
+                <button class="right-3 m-auto absolute">
+                    &#10095;
+                </button>
+            </div>
+            <!-- End Div Arrows  -->
+            
                 <img
                     class="object-none md:object-scale-down overscroll-contain object-center "
                     style="padding: auto"
@@ -48,7 +64,13 @@
 
                 <!-- <img v-for="c in Dcar.Image"  :src="imageOne(c)" :alt="Dcar.Title"> -->
 
+                <!-- Carousel -->
+                <div class="z-10 absolute justify-center  inline-flex bg-red-400 align-middle m-auto overflow-auto  h-28 bottom-0">
+
+                    <img v-for="c in Dcar.Image"  :src="imageOne(c)" :alt="Dcar.Title"> 
+                 </div>
             </div>
+            <!-- End Image box  -->
 
             <div class="border-black border-2 w-1/2 ">
                 <p>{{ Dcar.Brand }}</p>

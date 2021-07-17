@@ -95,7 +95,7 @@
                             <a
                                 href="#"
                                 class="text-gray-300 trans  hover:bg-gray-700  px-3 py-2 rounded-md text-xl font-medium"
-                                >From</a>
+                                >Forum</a>
 
                             <a
                                 href="#"
@@ -239,7 +239,7 @@
                 <a
                     href="#"
                     class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    >Forms</a
+                    >Forum</a
                 >
                   <a
                     href="#"
