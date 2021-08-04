@@ -6,6 +6,10 @@ and to enhance my skills in a vue.js
 
 Developed by GHK
 
+if you wanted to test it run this command:
+#> npm run dev 
+
+
 
 some screenshot's 
 
