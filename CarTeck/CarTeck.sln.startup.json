@@ -1,0 +1,28 @@
+/*
+    This is a configuration file for the SwitchStartupProject Visual Studio Extension
+    See https://heptapod.host/thirteen/switchstartupproject/blob/branch/current/Configuration.md
+*/
+{
+  /*  Configuration File Version  */
+  "Version": 3,
+  "MultiProjectConfigurations": {
+    "Client": {
+      "Projects": {
+        "Client": {}
+      }
+    },
+    "API": {
+      "Projects": {
+        "CTK.API": {}
+      }
+    },
+    "CTK": {
+      "Projects": {
+        "Client": {},
+        "CTK.API": {}
+      }
+    }
+  }
+}
+
+dotnet new gitignore
