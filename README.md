@@ -1,8 +1,8 @@
 # CarTeck
 It is a project that I am  developing in my a free time.
 
-I am developing this to learning more about the new Vue3 version that came out
-and to enhance my skills in a vue.js
+I am developing this to learning more about the Vue3 version to enhance my skills in a vue.js
+(the backend is developed in c# but is not public.)
 
 Developed by GHK
 
