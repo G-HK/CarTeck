@@ -11,14 +11,14 @@ import firebase from 'firebase';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDlhuDyRTqZROiZ1GXQ2cCIUMk2Znkajy4",
+  apiKey: "",
   authDomain: "crtk-demo.firebaseapp.com",
-  databaseURL: "https://crtk-demo-default-rtdb.europe-west1.firebasedatabase.app",
+  databaseURL: "",
   projectId: "crtk-demo",
   storageBucket: "crtk-demo.appspot.com",
-  messagingSenderId: "785358660980",
-  appId: "1:785358660980:web:d9e30befa374dd8167f821",
-  measurementId: "G-N1ZEF6TSQD"
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
