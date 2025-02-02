@@ -2,29 +2,28 @@
 
 # This stage is used when running from VS in fast mode (Default for Debug configuration)
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
-USER $APP_UID
+USER app
 WORKDIR /app
-EXPOSE 5000
-EXPOSE 5001
+EXPOSE 5002
 
 
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["src/API/CTK.API/CTK.API.csproj", "src/API/CTK.API/"]
-RUN dotnet restore "./src/API/CTK.API/CTK.API.csproj"
+COPY ["src/Client/Client/Client.csproj", "src/Client/"]
+RUN dotnet restore "./src/Client/Client/Client.csproj"
 COPY . .
-WORKDIR "/src/src/API/CTK.API"
-RUN dotnet build "./CTK.API.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/Client"
+RUN dotnet build "./Client.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./CTK.API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./Client.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "CTK.API.dll"]
+ENTRYPOINT ["dotnet", "Client.dll"]
